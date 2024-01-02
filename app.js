@@ -59,6 +59,14 @@ if (firstCard.style.backgroundImage === secondCard.style.backgroundImage) {
   matchedCards.push(...flippedCards)
   flippedCards = []
 }
+//logic for win condtiions
+} else {
+  setTimeout(()=> {
+    flipCard(firstCard)
+    flipCard(secondCard)
+    flippedCards = []
+  },1000)
+  }
 }
 function updateTimer(){
 
