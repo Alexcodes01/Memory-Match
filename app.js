@@ -22,7 +22,7 @@ restartButton.addEventListener(`click`, restartGame)
 
 // Functions
 function intializeGame(){
-  const shuffledCards = shuffleArray(shuffledImages))
+  const shuffledCards = shuffleArray(shuffledImages)
 }
 shuffledImages.push(cardImages)
 shuffledImages.push(cardImages)
@@ -43,6 +43,16 @@ for (let i = array.length - 1; i > 0; i--) {
 }
 return array;
 }
+function handleCardClick (event) {
+  const clickedCard = event.target
+  if (!clickedCard.classList.contains(`card`) flippedCards.length === 2 || clickedCard === flippedCards[0]) {
+  return
+}
+flipCard(clickedCard)
+flippedCards.push(clickedCard)
+if (flippedCards.length === 2) { 
+  setTimeout(checkForMatch, 1000)}
+
 function checkForMatch(){
 
 }
