@@ -54,7 +54,11 @@ if (flippedCards.length === 2) {
   setTimeout(checkForMatch, 1000)}
 
 function checkForMatch(){
-
+const [firstCard, secondCard] = flippedCards
+if (firstCard.style.backgroundImage === secondCard.style.backgroundImage) {
+  matchedCards.push(...flippedCards)
+  flippedCards = []
+}
 }
 function updateTimer(){
 
