@@ -77,8 +77,14 @@ if (matchedCards.length ===totalcards){
 }
 
 function handleWin(){
-
+const winMessage = document.getElementById(`winMessage`)
+winMessage.style.display = `block`
+setTimeout(restartGame,10000)
 }
+
+function restartButton( {
+
+})
 
 function updateTimer(){
 
