@@ -1,0 +1,23 @@
+.game-board {
+  display: flex
+  flex-wrap: wrap
+  width: 300px
+  margin: 0 auto
+}
+
+
+.card {
+  width: 100px
+  height: 100px
+  background-color: #ccc
+  margin: 5px
+  cursor: pointer
+}
+
+
+#win-message {
+  display: none
+  text-align: center
+  margin-top: 20px
+  font-size: 18px
+}
