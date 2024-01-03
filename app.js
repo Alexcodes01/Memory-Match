@@ -79,12 +79,19 @@ if (matchedCards.length ===totalcards){
 function handleWin(){
 const winMessage = document.getElementById(`winMessage`)
 winMessage.style.display = `block`
-setTimeout(restartGame,10000)
+setTimeout(resetGame, 8000)
 }
 
-function restartButton( {
+function resetGame() {
+const winMessage = document.getElementById(`winMessage`)
+winMessage.style.display = `none`
+matchedCards = []
+flippedCards = []
+intializeGame()
 
-})
+}
+
+
 
 function updateTimer(){
 
