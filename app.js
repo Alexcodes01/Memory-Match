@@ -52,22 +52,34 @@ flipCard(clickedCard)
 flippedCards.push(clickedCard)
 if (flippedCards.length === 2) { 
   setTimeout(checkForMatch, 1000)}
-
+//checking for match------------------------
 function checkForMatch(){
-const [firstCard, secondCard] = flippedCards
-if (firstCard.style.backgroundImage === secondCard.style.backgroundImage) {
-  matchedCards.push(...flippedCards)
-  flippedCards = []
-}
-//logic for win condtiions
-} else {
-  setTimeout(()=> {
-    flipCard(firstCard)
-    flipCard(secondCard)
-    flippedCards = []
-  },1000)
+  const [firstCard, secondCard] = flippedCards
+  if (firstCard.style.backgroundImage === secondCard.style.backgroundImage) {
+    handleMatch()
+  } else {
+    setTimeout(()=> {
+      flipCard(firstCard)
+      flipCard(secondCard)
+      flippedCards = []
+    },1000)
+    }
+  
   }
+  //logic for win condtiions
 }
+function handleMatch()
+matchedCards.push(...flippedCards)
+flippedCards = []
+
+if (matchedCards.length ===totalcards){
+  handleWin()
+}
+
+function handleWin(){
+
+}
+
 function updateTimer(){
 
 }
