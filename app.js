@@ -107,27 +107,27 @@ if (matchedCards.length ===totalcards){
 }
 
 function handleWin(){
-const winMessage = document.getElementById(`winMessage`)
-winMessage.style.display = `block`
-stopTimer()
-setTimeout(resetGame, 8000)
+  const winMessage = document.getElementById(`winMessage`)
+  winMessage.style.display = `block`
+  stopTimer()
+  setTimeout(resetGame, 8000)
 }
 
 //reset game function
 function resetGame() {
-const winMessage = document.getElementById(`winMessage`)
-winMessage.style.display = `none`
-const cards = document.querySelectorAll(`.card`)
-cards.forEach(card =>{
-  card.classList.remove(`flipped`)
-})
-stopTimer()
-timeElapsed = 0
-timerDisplay.textContent = formatTime(timeElapsed)
+  const winMessage = document.getElementById(`winMessage`)
+  winMessage.style.display = `none`
+  const cards = document.querySelectorAll(`.card`)
+  cards.forEach(card =>{
+    card.classList.remove(`flipped`)
+  })
+  stopTimer()
+  timeElapsed = 0
+  timerDisplay.textContent = formatTime(timeElapsed)
 
-matchedCards = []
-flippedCards = []
-intializeGame()
+  matchedCards = []
+  flippedCards = []
+  intializeGame()
 
 }
 
