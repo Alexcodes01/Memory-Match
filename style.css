@@ -48,16 +48,46 @@ body {
 
 
 .card {
+  position: relative;
   width: 175px;
   height: 125px;
   background-color: rgb(96, 108, 56);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(54, 190, 165, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   transform-style: preserve-3d;
   transition: all 0.2s ease-in-out;
 }
 
+/* .card-face {
+  position: absolute;
+} */
 
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  overflow: hidden;
+}
+
+.card-back:hover .horse-icon{
+  width: 185px;
+  height: 135px;
+}
+
+.card-front {
+  transform: rotateY('180')
+}
+
+.horse-icon {
+  position: absolute;
+  width: 175px;
+  height: 125px;
+  
+}
 
 
