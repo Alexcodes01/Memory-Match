@@ -44,6 +44,7 @@ body {
   grid-gap: 15px;
   margin: 30px;
   justify-content: center;
+  perspective: 500px;
 }
 
 
@@ -59,9 +60,13 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-/* .card-face {
-  position: absolute;
-} */
+.card.visible .card-back {
+  transform: rotateY(-180)
+}
+.card.visible .card-front {
+  transform: rotateY(0)
+}
+
 
 .card-back {
   position: absolute;
@@ -80,7 +85,12 @@ body {
 }
 
 .card-front {
-  transform: rotateY('180')
+  transform: rotateY(180)
+}
+
+.card-front:hover .card-value{
+  width: 185px;
+  height: 135px;
 }
 
 .horse-icon {
