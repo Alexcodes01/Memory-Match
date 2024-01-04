@@ -1,23 +1,37 @@
-.game-board {
-  display: flex
-  flex-wrap: wrap
-  width: 300px
-  margin: 0 auto
+/* font styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
+h1 {
+  margin-bottom: 20px;
+}
 
+/*  card container */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 100px); /* Adjust columns as needed */
+  gap: 10px;
+  justify-content: center;
+}
+
+/* individual cards */
 .card {
-  width: 100px
-  height: 100px
-  background-color: #ccc
-  margin: 5px
-  cursor: pointer
+  width: 100px;
+  height: 100px;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
 }
 
-
-#win-message {
-  display: none
-  text-align: center
-  margin-top: 20px
-  font-size: 18px
+.card:hover {
+  transform: scale(1.05);
 }

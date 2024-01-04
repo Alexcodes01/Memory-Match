@@ -1,11 +1,41 @@
 // constants
-const total cards =16
+const total cards = [16]
+const cardContainer = document.querySelector('.card-container')
 const card images = [ ]
+
+// Card grid
+for (let i = 0; i < totalCards; i++) {
+  const card = document.createElement('div')
+  card.classList.add('card')
+  card.setAttribute('data-index', i)
+  cardContainer.appendChild(card)
+}
+const imageUrls = [
+  'image1.jpg', 'image1.jpg', // Pair 1
+  'image2.jpg', 'image2.jpg', // Pair 2
+  'image1.jpg', 'image1.jpg', // Pair 3
+  'image2.jpg', 'image2.jpg', // Pair 4
+  'image1.jpg', 'image1.jpg', // Pair 5
+  'image2.jpg', 'image2.jpg', // Pair 6
+  'image1.jpg', 'image1.jpg', // Pair 7
+  'image2.jpg', 'image2.jpg', // Pair 8
+  
+]
+
+// Shuffle the image 
+shuffleArray(imageUrls);
+
+const cards = document.querySelectorAll('.card');
+cards.forEach((card, index) => {
+  const imageUrl = imageUrls[index];
+  card.style.backgroundImage = `url(${imageUrl})`;
+})
+
 
 // variables (state)
 let flippedCards = []
 let matchedCards = []
-let timer =0
+let timer = 0
 let time = 0
 let isFlipped = false
 
