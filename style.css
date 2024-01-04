@@ -1,37 +1,63 @@
-/* font styling */
+* {
+  box-sizing: border-box;
+}
+html {
+  min-height: 100vh;
+}
+
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
+  font-family: Garamond, sans-serif;
+  background-color: rgb(188, 108, 37);
   padding: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  }
+
+.game-title {
+  color: rgb(254, 250, 224);
+  font-family: Garamond, sans-serif;
+  font-weight: normal;
+  text-align: center;
+  font-size: 5em;
 }
 
-h1 {
-  margin-bottom: 20px;
+.game-info-container {
+  grid-column: 1/-1;
+  display: flex;
+  justify-content: space-between;
 }
 
-/*  card container */
-.card-container {
+
+.game-clock-score {
+  font-family: Garamond, sans-serif;
+  font-size: 1em;
+  color: rgb(252, 248, 220);
+  }
+
+
+.game-container {
   display: grid;
-  grid-template-columns: repeat(4, 100px); /* Adjust columns as needed */
-  gap: 10px;
+  grid-template-columns:repeat(4, auto);
+  grid-gap: 15px;
+  margin: 30px;
   justify-content: center;
 }
 
-/* individual cards */
+
 .card {
-  width: 100px;
-  height: 100px;
-  background-color: #f0f0f0;
+  width: 175px;
+  height: 125px;
+  background-color: rgb(96, 108, 56);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(54, 190, 165, 0.1);
   cursor: pointer;
-  transition: transform 0.2s ease-in-out;
+  transform-style: preserve-3d;
+  transition: all 0.2s ease-in-out;
 }
 
-.card:hover {
-  transform: scale(1.05);
-}
+
+
+

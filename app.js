@@ -23,12 +23,12 @@ const imageUrls = [
 ]
 
 // Shuffle the image 
-shuffleArray(imageUrls);
+shuffleArray(imageUrls)
 
-const cards = document.querySelectorAll('.card');
+const cards = document.querySelectorAll('.card')
 cards.forEach((card, index) => {
-  const imageUrl = imageUrls[index];
-  card.style.backgroundImage = `url(${imageUrl})`;
+  const imageUrl = imageUrls[index]
+  card.style.backgroundImage = `url(${imageUrl})`
 })
 
 
