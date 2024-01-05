@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
   // Fisher-Yates shuffle method before game starts
   function shuffleCards() {
     for (let i = cards.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      cards[j].style.order = i;
-      cards[i].style.order = j;
+      const j = Math.floor(Math.random() * (i + 1))
+      cards[j].style.order = i
+      cards[i].style.order = j
     }
   }
 
@@ -36,7 +36,6 @@ document.addEventListener("DOMContentLoaded", () => {
   function flipCard() {
     if (lockBoard) return
     if (this === firstCard) return
-
     this.classList.toggle("flip")
     if (!isFlipped) {
       // First card flipped
@@ -48,9 +47,12 @@ document.addEventListener("DOMContentLoaded", () => {
       flipsDisplay.textContent = totalFlips
       isFlipped = false
       secondCard = this
-
+      
       checkForMatch()
+      
     }
+    const flipsound=document.getElementById("card-flip")
+    flipsound.play()
   }
 
   // Function to check for card match
@@ -97,6 +99,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function handleWin() {
     winMessage.textContent = "Congratulations! You've Matched Them All!"
     clearInterval(timerInterval) // Stop the timer
+    const flipsound=document.getElementById("winNoise")
+    flipsound.play()
   }
 
   // Timer functionality
