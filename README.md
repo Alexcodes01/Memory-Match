@@ -21,15 +21,16 @@ To play the game, [click here](https://equinematch.netlify.app/). Once loaded, c
 ## How to Play
 1. Click on a card to reveal its image.
 2. Click on another card to try and find a matching pair.
-3. If the images match, the cards stay face up.
+3. If the images match, the cards stay faced up.
 4. If the images don't match, the cards flip back over.
-5. Continue until all pairs are found.
+5. Continue until all pairs are found or until the time runs out.
 
 ## Technologies Used
 - HTML
 - CSS
 - JavaScript
 - Github
+- Netlify
 
 ## Next Steps
 - Implement a scoring system with levels of difficulty
