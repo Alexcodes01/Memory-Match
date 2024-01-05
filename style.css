@@ -62,20 +62,20 @@ body {
 
 .card .card-back {
   transform: rotateY(0); 
+  transition: transform 0.8s ease-in-out;
 }
 
 .card .card-front {
   transform: rotateY(0);
+  transition: transform 0.8s ease-in-out;
 }
 
 
 .card.flip .card-back {
   transform: rotateY(-180deg); 
-  transition: transform 0.5s ease-in;
 }
 
 .card.flip .card-front {
-  transition: transform 0.5s ease-in;
   transform: rotateY(-180deg); 
 }
 

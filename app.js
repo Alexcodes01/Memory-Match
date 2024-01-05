@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card")
   const flipsDisplay = document.getElementById("flips")
@@ -13,11 +14,23 @@ document.addEventListener("DOMContentLoaded", () => {
   let matches = 0
   let timeRemaining = 99 // Timer
 
+  // Fisher-Yates shuffle method before game starts
+  function shuffleCards() {
+    for (let i = cards.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      cards[j].style.order = i;
+      cards[i].style.order = j;
+    }
+  }
+
+  shuffleCards()
+
   // Function to start the game
   function startGame() {
     cards.forEach(card => card.addEventListener("click", flipCard))
     startTimer()
   }
+
 
   // Function to flip the card
   function flipCard() {
@@ -42,7 +55,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Function to check for card match
   function checkForMatch() {
-    if (firstCard.dataset.index === secondCard.dataset.index) {
+    const firstvalue=firstCard.getAttribute("data-value")
+    const secondvalue=secondCard.getAttribute("data-value")
+    if (firstvalue === secondvalue) {
       disableCards()
       matches++
       if (matches === cards.length / 2) {
